@@ -17,11 +17,10 @@ jobs:
           uses: githubocto/repo-visualizer@0.7.1
           with:
            output_file: "output-diagram.svg"
-           artifact_name: "diagram"
            should_push: false
 
-        - name: Get artifact
-          uses: actions/download-artifact@v4
+        - name: Upload artifact
+          uses: actions/upload-artifact@v4
           with:
            name: "diagram"
            path: "downloads"
